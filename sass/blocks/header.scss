@@ -1,0 +1,31 @@
+.header {
+	position: relative;
+	z-index: 100;
+  width: 100%;
+	box-shadow: 2px 2px 5px rgba(56, 56, 56, 0.75);
+}
+
+.header__row {
+	display: flex;
+	align-items: center;
+  // gree row
+  &:first-child {
+    width: 100%;
+		min-height: 170px;
+    background: $green url("../img/header.jpg") center no-repeat;
+		background-size: cover;
+  }
+  // yell row
+  &:last-child {
+    width: 100%;
+		min-height: 80px;
+    background-color: $yellow;
+  }
+}
+
+.header__title {
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	font: bold 78px $font_2;
+}

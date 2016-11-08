@@ -1,0 +1,34 @@
+.partners {
+	@include clearfix;
+}
+
+.partners__title {
+
+}
+
+.partners__list {
+	display: flex;
+	flex-direction: column;
+	width: 32%;
+	float: left;
+}
+
+.partners__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 5.6rem;
+	margin: 0 0 3rem 0;
+	background: url("../img/icons/karta-link.svg") center no-repeat;
+	background-size: 78%;
+}
+
+.partners__link {
+
+}
+
+.partners__banner {
+	width: 62%;
+	float: right;
+}

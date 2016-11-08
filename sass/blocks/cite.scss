@@ -1,0 +1,19 @@
+.cite {
+	z-index: 50;
+	position: relative;
+	width: 100%;
+	min-height: 10rem;
+	background: $gold url("../img/banner_map.jpg") center no-repeat;
+	background-size: cover;
+	box-shadow: -2px -2px 5px rgba(76, 76, 76, 0.75), 2px 2px 5px rgba(76, 76, 76, 0.75);
+}
+
+.cite__title {
+	display: flex;
+	align-items: center;
+	min-height: 10rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: #38495F;
+	background-color: rgba(255, 255, 255, 0.6);
+}

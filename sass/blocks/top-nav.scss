@@ -1,0 +1,16 @@
+.top-nav {
+
+}
+
+.top-nav__list {
+	display: flex;
+	justify-content: space-around;
+}
+
+.top-nav__item {}
+
+.top-nav__link {
+	display: block;
+	padding: 5px;
+	font: normal 2.6rem $font_1;
+}

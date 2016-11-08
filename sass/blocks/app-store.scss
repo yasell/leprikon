@@ -1,0 +1,30 @@
+.app-store {
+	display: flex;
+	width: 100%;
+	padding: 3rem 0;
+}
+
+.app-store__item {
+	display: block;
+	margin: 0 0 0 1.5rem;
+	background-color: $gold;
+	border-radius: 0.8rem;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		// app-store
+		&:first-child {
+			background-image: url("../img/icons/app-store.svg");
+		}
+		// play market
+		&:last-child {
+			background-image: url("../img/icons/play.svg");
+		}
+}
+
+.app-store__link {
+	display: block;
+	width: 19rem;
+	height: 6.5rem;
+	font-size: 0;
+}

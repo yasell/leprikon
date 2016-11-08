@@ -1,0 +1,62 @@
+.textblock {
+	font: 200 2.4rem $font_1;
+
+	p {
+		margin: 1rem 0;
+	}
+
+	// **
+	p:last-child {
+		font-size: 1.8rem;
+	}
+
+	ol {
+		margin: 1.5rem 0;
+		list-style-position: inside;
+
+		ul {
+			padding: 2rem 0 0;
+
+			li {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1.5rem;
+			}
+
+			li:before {
+				content: "";
+				display: block;
+				width: 6rem;
+				height: 6rem;
+				margin: 0 1rem 0 0;
+				background: url("../img/icons/check.svg") center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}
+
+.textblock__fl {
+	li:first-child {
+		position: relative;
+
+		ul {
+			position: relative;
+			top: -3.5rem;
+			margin-left: 25rem;
+			padding: 0;
+
+			li:before {
+				width: 9rem;
+				height: 9rem;
+				margin: 0 1rem 0 0;
+			}
+			li:first-child:before {
+				background: url("../img/icons/gold_coin.svg") center no-repeat;
+			}
+			li:last-child:before{
+				background: url("../img/icons/red_coin.svg") center no-repeat;
+			}
+		}
+	}
+}

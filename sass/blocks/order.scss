@@ -1,0 +1,63 @@
+.order {
+	min-height: 59rem;
+	background: $gold url("../img/promo_bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.order__inner {
+	@include clearfix;
+}
+
+.order__form-wrap {
+	width: 50%;
+	float: left;
+	padding: 0 2rem;
+}
+
+// form
+.order-f__input {
+	display: block;
+	width: 100%;
+	height: 3rem;
+	padding: 0.5rem;
+	font: normal 1rem/1.33 $font_1;
+	color: $color_field;
+	box-shadow: inset 0 0 0 1px $black;
+	border: 1px solid $color_field_border;
+	border-radius: 5px;
+
+	&::-webkit-input-placeholder {
+		color: $color_field;
+	}
+	&::-moz-placeholder {
+		color: $color_field;
+	}
+	&:-ms-input-placeholder {
+		color: $color_field;
+	}
+
+	&:hover {
+		border-color: $color_field_hover;
+	}
+	&:focus {
+		outline: none;
+		border-color: $color_field_hover;
+	}
+	&:required:valid {
+		border-color: $green;
+	}
+}
+
+.order-f {}
+
+.order-f__list {}
+
+.order-f__item {}
+
+// leprikon
+.order__img-wrap {
+	width: 50%;
+	float: right;
+}
+
+.order__img {}
