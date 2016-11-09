@@ -2,6 +2,14 @@
 	display: flex;
 	width: 100%;
 	padding: 3rem 0;
+
+	&_footer {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 320px;
+		padding: 0;
+	}
 }
 
 .app-store__item {
@@ -9,17 +17,34 @@
 	margin: 0 0 0 1.5rem;
 	background-color: $gold;
 	border-radius: 0.8rem;
-		background-repeat: no-repeat;
-		background-size: contain;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px $color_shadow;
+	transition-duration: 0.3s;
+	transition-property: transform;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 
 		// app-store
 		&:first-child {
-			background-image: url("../img/icons/app-store.svg");
-		}
+			background-image: url("../img/icons/app-store.svg"); }
 		// play market
 		&:last-child {
-			background-image: url("../img/icons/play.svg");
+			background-image: url("../img/icons/play.svg"); }
+
+		// gray items
+		&_gray {
+			width: 19rem;
+			margin: 0 0 2.5rem 0;
+
+			&:last-child {margin: 0;}
+			.app-store__link {height: 6.2rem;}
 		}
+		&_gray:first-child {background-image: url("../img/icons/app-store_footer.svg");}
+		&_gray:last-child {background-image: url("../img/icons/play_footer.svg");}
 }
 
 .app-store__link {

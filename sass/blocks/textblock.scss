@@ -1,5 +1,5 @@
 .textblock {
-	font: 200 2.4rem $font_1;
+	font: 300 2.4rem $font_1;
 
 	p {
 		margin: 1rem 0;
@@ -35,6 +35,8 @@
 		}
 	}
 }
+
+.textblock__bold {font-weight: 600;}
 
 .textblock__fl {
 	li:first-child {
