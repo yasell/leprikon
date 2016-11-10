@@ -1,17 +1,27 @@
-.copyright {
-
-}
-
 .copyright__link {
 	display: block;
-	color: white;
+	color: #ff3d35;
+	text-decoration: none;
+	transition: all 0.5s;
+
+	span {
+		color: white;
+	}
 
 	&:hover {
+		color: white;
 		text-decoration: none;
+
+		span {
+			color: #ff3d35;
+		}
 	}
+
 	&:first-child {
 		font: 300 1.4rem $font_1;
+		color: white;
 	}
+
 	&:last-child {
 		font: 700 2.2rem $font_1;
 	}
