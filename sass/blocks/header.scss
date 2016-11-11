@@ -6,20 +6,25 @@
 }
 
 .header__row {
+	position: relative;
 	display: flex;
 	align-items: center;
   // gree row
   &:first-child {
     width: 100%;
-		min-height: 170px;
+		min-height: 17rem;
     background: $green url("../img/header_bg.svg") repeat;
-		background-size: 40px;
+		background-size: 4rem;
   }
   // yell row
   &:last-child {
     width: 100%;
-		min-height: 80px;
+		min-height: 8rem;
     background-color: $yellow;
+
+		@media (max-width: $mobile_full) {
+			max-height: 8rem;
+		}
   }
 }
 
@@ -27,5 +32,88 @@
 	margin: 0 auto;
 	text-align: center;
 	color: white;
-	font: bold 78px $font_2;
+	font: bold 7.8rem $font_2;
+}
+
+/* burger */
+.menu__trigger-wrap {
+	z-index: 100;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 8rem;
+}
+
+.menu__trigger {
+  z-index: 210;
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  display: none;
+  height: 2.6rem;
+  width: 3.8rem;
+  margin-top: -1.6rem;
+  text-transform: uppercase;
+  color: transparent;
+  cursor: pointer;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0.4rem;
+        margin-top: -.2rem;
+        background: black;
+        -webkit-transform: translate(0, -1rem);
+        -ms-transform: translate(0, -1rem);
+        transform: translate(0, -1rem);
+        transition: all 0.3s ease;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0.4rem;
+        margin-top: -.2rem;
+        background: black;
+        -webkit-transform: translate(0, 1rem);
+        -ms-transform: translate(0, 1rem);
+        transform: translate(0, 1rem);
+        transition: all 0.3s ease;
+    }
+    @media (max-width: $mobile_full) {
+        display: block;
+    }
+}
+/* X */
+.menu__trigger.active__mod {
+    &:before {
+        -webkit-transform: rotate(45deg) translate(0, 0);
+        -ms-transform: rotate(45deg) translate(0, 0);
+        transform: rotate(45deg) translate(0, 0);
+    }
+    &:after {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        -ms-transform: rotate(-45deg) translate(0, 0);
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+.menu__trigger-decor {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    margin-top: -.2rem;
+    background: black;
+    transition: all 0.3s ease;
+}
+.active__mod .menu__trigger-decor {
+    opacity: 0;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
 }

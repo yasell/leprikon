@@ -7,49 +7,85 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		width: 320px;
+		width: 32rem;
 		padding: 0;
+		@media (max-width: $mobile_full) {
+			width: 100%;
+			.app-store__item {
+				width: 100%;
+				max-width: none;
+			}
+		}
+	}
+	@media (max-width: $tablet) {
+		flex-direction: column;
+		padding: 0 0 3rem 0;
 	}
 }
 
 .app-store__item {
 	display: block;
-	margin: 0 0 0 1.5rem;
-	background-color: $gold;
+	width: 50%;
+	margin: 0;
 	border-radius: 0.8rem;
-	background-repeat: no-repeat;
+	background: $gold center no-repeat;
 	background-size: contain;
 	transform: perspective(1px) translateZ(0);
 	box-shadow: 0 0 1px $color_shadow;
 	transition-duration: 0.3s;
 	transition-property: transform;
 
-		&:hover {
-			transform: scale(1.1);
-		}
-
 		// app-store
 		&:first-child {
 			background-image: url("../img/icons/app-store.svg"); }
 		// play market
 		&:last-child {
-			background-image: url("../img/icons/play.svg"); }
+			margin-left: 1.5rem;
+			background-image: url("../img/icons/play.svg");
+			@media (max-width: $tablet) {
+				margin-left: 0;
+			}
+		}
 
-		// gray items
+		// footer icons
 		&_gray {
-			width: 19rem;
+			width: 100%;
+			max-width: 19rem;
 			margin: 0 0 2.5rem 0;
-
-			&:last-child {margin: 0;}
-			.app-store__link {height: 6.2rem;}
+			background-color: #CBBBA0;
+			.app-store__link {
+				height: 6.2rem;
+			}
+			&:last-child {
+				margin: 0;
+			}
 		}
 		&_gray:first-child {background-image: url("../img/icons/app-store_footer.svg");}
 		&_gray:last-child {background-image: url("../img/icons/play_footer.svg");}
+
+		// small
+		&_small {
+			width: 30%;
+			max-width: 30rem;
+			@media (max-width: $mobile_full) {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+
+		&:hover, &:active, &:focus {
+			outline: none;
+			transform: scale(1.1);
+		}
+		@media (max-width: $tablet) {
+			width: 100%;
+			margin: 0 0 1.5rem 0;
+		}
 }
 
 .app-store__link {
 	display: block;
-	width: 19rem;
+	width: 100%;
 	height: 6.5rem;
 	font-size: 0;
 }

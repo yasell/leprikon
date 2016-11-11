@@ -1,5 +1,5 @@
 .footer {
-	min-height: 230px;
+	min-height: 23rem;
 	background-color: rgba(79, 76, 67, 0.99);
 }
 
@@ -8,8 +8,18 @@
 
 	display: flex;
 	justify-content: space-between;
-	// align-items: flex-start;
-	padding: 40px 15px 20px 15px;
+	padding: 4rem 1.5rem 2rem 1.5rem;
+
+	@media (max-width: $mobile_full) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.footer__nav {
+	@media (max-width: $mobile_full) {
+		width: 100%;
+	}
 }
 
 .footer__item {
@@ -51,5 +61,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	flex-basis: 400px;
+	flex-basis: 40rem;
+
+	@media (max-width: $mobile_full) {
+		width: 100%;
+		align-items: center;
+		flex-basis: auto;
+	}
 }

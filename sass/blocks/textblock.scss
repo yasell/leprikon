@@ -38,14 +38,23 @@
 
 .textblock__bold {font-weight: 600;}
 
+.textblock__quote {
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		background: url("../img/icons/quote.svg") center no-repeat;
+		background-size: contain;
+	}
+}
+
 .textblock__fl {
 	li:first-child {
 		position: relative;
 
 		ul {
 			position: relative;
-			top: -3.5rem;
-			margin-left: 25rem;
 			padding: 0;
 
 			li:before {
@@ -58,6 +67,10 @@
 			}
 			li:last-child:before{
 				background: url("../img/icons/red_coin.svg") center no-repeat;
+			}
+			@media (min-width: $tablet) {
+				top: -3.5rem;
+				margin-left: 25rem;
 			}
 		}
 	}

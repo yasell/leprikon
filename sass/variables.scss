@@ -4,14 +4,21 @@ $color_shadow: rgba(76, 76, 76, 0.75);
 
 $black: rgba(0, 0, 0, 1);
 $yellow: rgba(241, 220, 141, 1);
-$gold: #856447;
 $gold_light: #F4E9C3;
+$gold: #856447;
+$gold_dark: #3D322A;
 $green: #2aab6d;
 $green_dark: #1c9b5e;
-
+// shadow
 $img-shadow: 2px 2px 5px $color_shadow;
 
 // fonts
 $font_1: "Open Sans", "Arial", sans-serif;
 $font_2: "LifehackBold", "Arial", sans-serif;
 $font_3: "Jakob", "Arial", sans-serif;
+
+// media
+$mobile: 320px;
+$mobile_full: 468px;
+$tablet: 768px;
+$desktop: 1024px;

@@ -6,8 +6,12 @@
 .partners__list {
 	display: flex;
 	flex-direction: column;
-	width: 33%;
+	width: 38%;
 	float: left;
+
+	@media (max-width: 760px) {
+		width: 100%;
+	}
 }
 
 .partners__item {
@@ -18,14 +22,15 @@
 	margin: 0 0 1rem 0;
 	padding: 2.1rem 0;
 	background: url("../img/icons/karta-link.svg") center no-repeat;
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-position: 0;
 }
 
 .partners__link {
 	margin-left: 7rem;
-	font: 600 2.4rem $font_1;
+	font: 600 2rem $font_1;
 	color: #634E42;
+	word-spacing: no-wrap;
 	transform: perspective(1px) translateZ(0);
 	box-shadow: 0 0 1px transparent;
 	transition-duration: 0.3s;
@@ -36,12 +41,19 @@
 		text-decoration: none;
 		transform: scale(1.1);
 	}
+	@media (screen) {
+
+	}
 }
 
 .partners__banner {
-	width: 63%;
+	display: block;
+	width: 60%;
 	float: right;
 	padding-top: 1.5rem;
 
 	img {max-width: 100%;}
+	@media (max-width: 760px) {
+		display: none;
+	}
 }

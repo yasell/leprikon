@@ -2,39 +2,33 @@
 	min-height: 80rem;
 	background: $yellow url("../img/promo_bg.jpg") center no-repeat;
 	background-size: cover;
+
+	@media (max-width: $mobile_full) {
+		min-height: 75rem;
+	}
 }
 
 .promo__inner {
 	@include clearfix;
 }
 
-.promo__title {}
-
 .promo__col {
 	width: 50%;
 	float: left;
+}
 
-	// leprikon img
-	&:first-child {
-		position: relative;
-		width: 100%;
-		height: 360px;
-		overflow: hidden;
-		.promo__img {
-			min-width: 100%;
-			min-height: 100%;
-			@include center;
-		}
-	}
+.promo__img {
+	max-width: 100%;
 }
 
 .promo__img-wrapper {
 	position: relative;
 	width: 100%;
-	height: 360px;
+	height: 36rem;
 	overflow: hidden;
 
-	.promo__img {
-		max-width: 100%;
+	@media (max-width: $mobile_full) {
+		height: auto;
+		margin-bottom: 2rem;
 	}
 }

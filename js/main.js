@@ -3,6 +3,20 @@ $(function() {
 	AOS.init();
 });
 
+// burger`s mechanik
+$body = $("body");
+$menuTrigger = $("#menu__trigger");
+
+$menuTrigger.on("click", function () {
+	if ($body.hasClass("menu__open")) {
+		$body.removeClass("menu__open");
+		$(this).removeClass("active__mod");
+	} else {
+		$body.addClass("menu__open");
+		$(this).addClass("active__mod");
+	}
+});
+
 // menu scroll
 $(".top-nav, .footer__nav").on("click", "a", function(event) {
 	event.preventDefault();

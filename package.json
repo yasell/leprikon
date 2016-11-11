@@ -7,7 +7,7 @@
 
   "devDependencies": {
 		"gulp": "3.9.1",
-    "browser-sync": "2.17.3",
+    "browser-sync": "2.17.5",
 		"gulp-sass": "2.3.2",
 		"gulp-postcss": "6.2.0",
     "gulp-autoprefixer": "^3.1.1",
@@ -15,7 +15,7 @@
 		"gulp-clean": "^0.3.2",
     "gulp-rename": "^1.2.2",
 		"gulp-cssnano": "^2.1.2",
-		"gulp-image": "2.7.1",
+		"gulp-image": "2.7.2",
 		"gulp-minify": "0.0.14",
 		"gulp-plumber": "1.1.0",
 		"npm-check-updates": "^2.8.0"

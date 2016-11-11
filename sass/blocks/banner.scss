@@ -1,5 +1,12 @@
 .banner {
-	min-height: 20rem;
+	min-height: 4rem;
+
+	@media (min-width: $tablet) {
+		min-height: 7rem;
+	}
+	@media (min-width: $desktop) {
+		min-height: 20rem;
+	}
 
 	img {
 		max-width: 100%;

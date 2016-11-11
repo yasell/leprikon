@@ -1,5 +1,4 @@
 // base style
-
 *,
 *::after,
 *::before {
@@ -8,16 +7,26 @@
 
 html {
 	height: 100%;
-	font: 300 10px/1.33 $font_1;
+	font: 300 7px/1.33 $font_1;
+
+	@media (min-width: $tablet) {
+		font-size: 9px;
+	}
+	@media (min-width: $desktop) {
+		font-size: 10px;
+	}
 }
 
 body {
 	position: relative;
 	margin: 0;
 	padding: 0;
-	height: 100%;
+	width: 100%;
+	min-width: 30rem;
+	min-height: 100%;
 	font: 300 2rem/1.3 $font_1;
-	color: #3D322A;
+	color: $gold_dark;
+	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
