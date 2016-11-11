@@ -20,6 +20,10 @@ $menuTrigger.on("click", function () {
 // menu scroll
 $(".top-nav, .footer__nav").on("click", "a", function(event) {
 	event.preventDefault();
+	if ($body.hasClass("menu__open")) {
+		$body.removeClass("menu__open");
+		$menuTrigger.removeClass("active__mod");
+	}
 	var id = $(this).attr("href"),
 		top = $(id).offset().top;
 	$("body,html").animate({

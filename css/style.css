@@ -214,7 +214,6 @@ a {
 
 /* burger */
 .menu__trigger-wrap {
-  z-index: 100;
   position: absolute;
   top: 0;
   width: 100%;
@@ -285,6 +284,10 @@ a {
   -webkit-transform: translate(100%, 0);
   -ms-transform: translate(100%, 0);
   transform: translate(100%, 0); }
+
+.top-nav {
+  z-index: 200;
+  position: relative; }
 
 .top-nav__list {
   display: -webkit-flex;
