@@ -7,7 +7,7 @@ $(function() {
 $body = $("body");
 $menuTrigger = $("#menu__trigger");
 
-$menuTrigger.on("click", function () {
+$menuTrigger.on("click", function() {
 	if ($body.hasClass("menu__open")) {
 		$body.removeClass("menu__open");
 		$(this).removeClass("active__mod");
@@ -58,8 +58,43 @@ $("#back-top").click(function() {
 	return false;
 });
 
+// easy form validate
+function validateForm(dir) {
+	var form = dir;
+	var name, phone;
+	var error = [];
+	// var checking;
+	form.find("#order").html("");
+	name = form.find("#name").val();
+	phone = form.find("#phone").val();
+	if (name === "") {
+		error.push("Введите имя*");
+	} else
+	if (!/[А-Яа-яЁёa-zA-Z`\s]{1,100}/.test(name)) {
+		error.push("*Мы ждём от Вас корректного имени");
+	}
+	if (phone === "") {
+		error.push("Введите телефон*");
+	} else
+	if (!/[0-9()-\s+]{3,20}/.test(phone)) {
+		error.push("*Введите корректный телефон");
+	}
+	if (error.length > 0) {
+		$.each(error, function() {
+			form.find(".order__error").append(this + "<br>");
+		});
+		return false;
+	}
+	return true;
+}
+
 // order send
 $("#order").submit(function() {
+	var valid = validateForm($(this));
+	if (!valid) {
+		return false;
+	}
+
 	$.ajax({
 		type: "POST",
 		url: "mail.php",
@@ -81,41 +116,4 @@ $("#order").submit(function() {
 		$("#order").trigger("reset");
 	});
 	return false;
-});
-
-// easy form validate
-function validateForm(dir) {
-    var form = dir;
-    var name, phone;
-    var error = [];
-    // var checking;
-    form.find("#order").html("");
-    name = form.find("#name").val();
-    phone = form.find("#phone").val();
-    if (name === "") {
-        error.push("Введите имя*");
-    } else
-    if (!/[А-Яа-яЁёa-zA-Z`\s]{1,100}/.test(name)) {
-        error.push("*Мы ждём от Вас корректного имени");
-    }
-    if (phone === "") {
-        error.push("Введите телефон*");
-    } else
-    if (!/[0-9()-\s+]{3,20}/.test(phone)) {
-        error.push("*Введите корректный телефон");
-    }
-    if (error.length > 0) {
-        $.each(error, function() {
-            form.find(".order__error").append(this + "<br>");
-        });
-        return false;
-    }
-    return true;
-}
-
-$(".order-btn").on("submit", function(e) {
-    var valid = validateForm($(this));
-    if (!valid) {
-        return false;
-    }
 });

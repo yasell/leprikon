@@ -46,7 +46,11 @@
 	height: 16rem;
 	border: 0.2rem solid #786A59;
 
-	p {
+	p:first-child {
+		position: absolute;
+		top: -3.2rem;
+	}
+	p:last-child {
 		width: 97%;
 		height: 95%;
 		padding: 1.2rem;
